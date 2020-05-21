@@ -1,8 +1,14 @@
 {% extends 'base.html' %} {% block content %}
-<h1>Add A New Book</h1>
+<div class="row center">
+  <div class="col s4"></div>
+  <div class="col s4 header blue-grey darken-1 white-text">
+    <h3>Add A New Book</h3>
+  </div>
+  <div class="col s4"></div>
+</div>
 <div class="row">
   <form action="{{ url_for('insert_book') }}" method="POST" class="col s12">
-    <div class="row">
+    <div class="row blue-grey darken-1 form-style">
       <div class="input-field col s12">
         <input
           placeholder="Author"
@@ -14,7 +20,7 @@
         <label for="author">Author</label>
       </div>
     </div>
-    <div class="row">
+    <div class="row blue-grey darken-1 form-style">
       <div class="input-field col s12">
         <input
           placeholder="Book Title"
@@ -26,7 +32,7 @@
         <label for="title">Book Title</label>
       </div>
     </div>
-    <div class="row">
+    <div class="row blue-grey darken-1 form-style">
       <div class="input-field col s12">
         <input
           placeholder="Plot Description"
@@ -34,11 +40,11 @@
           id="plot"
           type="text"
           class="materialize-textarea"
-        >
+        />
         <label for="plot">Plot Description</label>
       </div>
     </div>
-    <div class="row">
+    <div class="row blue-grey darken-1 form-style">
       <div class="input-field col s6">
         <input
           placeholder="Year Published"
@@ -49,22 +55,32 @@
         />
         <label for="year_published">Year Published</label>
       </div>
-      <div class="row">
-        <div class="input-field col s6">
-          <input
-            placeholder="Pages"
-            name="pages"
-            id="pages"
-            type="text"
-            class="validate"
-          />
-          <label for="pages">Pages</label>
-        </div>
+      <div class="input-field col s6">
+        <input
+          placeholder="Pages"
+          name="pages"
+          id="pages"
+          type="text"
+          class="validate"
+        />
+        <label for="pages">Pages</label>
       </div>
     </div>
-    <div class="row">
-      <button class="btn waves-effect waves-light" type="submit" name="action">
+
+    <div class="row blue-grey darken-1 form-style">
+      <button
+        class="btn waves-effect waves-light edit-button right"
+        type="submit"
+        name="action"
+      >
         Add Book
+      </button>
+      <button
+        class="btn waves-effect waves-light edit-button left"
+        type="submit"
+        name="action"
+      >
+        Return To Library
       </button>
     </div>
   </form>

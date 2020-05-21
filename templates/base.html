@@ -8,14 +8,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css"/>
     <title>Home</title>
   </head>
   <body>
-    <ul>
-      <li><a href="{{ url_for('index') }}">Home</a></li>
-      <li><a href="{{ url_for('books') }}">List of books</a></li>
-      <li><a href="{{ url_for('addbook') }}">Add A New Book</a></li>
-    </ul>
+    <nav>
+      <div class="nav-wrapper blue">
+        <a href="{{ url_for('index') }}" class="brand-logo left">Community Books</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('books') }}">All books</a></li>
+          <li><a href="{{ url_for('addbook') }}">Add A New Book</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       {% block content %} {% endblock %}
     </div>

@@ -1,3 +1,15 @@
-.body {
-    background-color: red:
+.brand-logo{
+    margin-left: 20px;
+}
+
+#nav-mobile {
+    margin-right: 10px;
+}
+
+.edit-button{
+    margin: 10px 15px 10px 0px;
+}
+
+.card-content{
+    margin: 24px;
 }

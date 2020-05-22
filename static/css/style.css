@@ -1,36 +1,65 @@
-.brand-logo{
-    margin-left: 20px;
+/* main logo style */
+.brand-logo {
+  margin-left: 20px;
 }
 
+/* for mobile nav button */
 #nav-mobile {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
-.edit-button{
-    margin: 10px 15px 10px 10px;
-    border-radius: 20px;
+/* for buttons on edit book page */
+.edit-button {
+  margin: 10px 15px 10px 10px;
+  border-radius: 20px;
 }
 
-.card-content{
-    margin: 24px;
+/* for book cards */
+.card-content {
+  margin: 24px;
 }
 
+/* main background image */
 body {
-    background-image: url('https://thenypost.files.wordpress.com/2019/03/old-library-book.jpg?quality=80&strip=all')
+  background-image: url("https://thenypost.files.wordpress.com/2019/03/old-library-book.jpg?quality=80&strip=all");
 }
 
+/* for page headers */
 .header {
-    margin: 20px 20px 10px 20px;
-    padding: 0px;
-    border-radius: 20px;
+  margin: 20px 20px 10px 20px;
+  padding: 0px;
+  border-radius: 20px;
 }
 
+/* Style for form entry fields*/
 .form-style {
-    margin: 15px 15px 10px 15px;
-    padding-top: 5px;
-    border-radius: 20px;
+  margin: 15px 15px 10px 15px;
+  border-radius: 20px;
 }
 
-h3{
-    margin: 10px 10px 10px 10px;
+/* for page header text */
+h3 {
+  margin: 10px 10px 10px 10px;
+}
+
+/* Style for buttons below forms*/
+.button-bar {
+  margin: 15px 15px 10px 15px;
+  border-radius: 20px;
+}
+
+/* Style for scroll to top button */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
 }

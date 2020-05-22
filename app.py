@@ -14,6 +14,7 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+
 def index():
     """displays home page"""
     return render_template("index.html")
@@ -27,14 +28,14 @@ def books():
 
 @app.route("/edit_book/<book_id>")
 def edit_book(book_id):
-    """edits a books details in the database"""
+    """displays the form for editing the selected book"""
     the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
     return render_template("editbook.html", book=the_book)
 
 
 @app.route('/update_book/<book_id>', methods=["POST"])
 def update_book(book_id):
-    """updates a book in the database"""
+    """updates the edit of book in the database"""
     book = mongo.db.books
     book.update({'_id': ObjectId(book_id)},
                 {
@@ -63,6 +64,7 @@ def insert_book():
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
+    """"removes a book from the database"""
     mongo.db.books.remove({'_id': ObjectId(book_id)})
     return redirect(url_for("books"))
 

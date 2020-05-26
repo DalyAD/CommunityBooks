@@ -15,6 +15,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 
+
 def index():
     """displays home page"""
     return render_template("index.html")
@@ -64,7 +65,14 @@ def insert_book():
 
 @app.route("/delete_book/<book_id>")
 def delete_book(book_id):
-    """"removes a book from the database"""
+    """"sends user to the delete book page"""
+    the_book = mongo.db.books.find_one({"_id": ObjectId(book_id)})
+    return render_template("confirmdelete.html", book=the_book)
+
+
+@app.route("/confirm_delete/<book_id>")
+def confirm_delete(book_id):
+    """removes a book from the database"""
     mongo.db.books.remove({'_id': ObjectId(book_id)})
     return redirect(url_for("books"))
 

@@ -10,65 +10,70 @@
     method="POST"
     class="col s12"
   >
-    <div class="row blue-grey darken-1 form-style">
+    <div class="row blue-grey darken-1 form-style validate">
       <div class="input-field col s12">
         <input
           placeholder="Author"
           name="author"
           id="author"
           type="text"
-          class="validate"
+          class="white-text validate"
           value="{{ book.author }}"
+          required
         />
         <label for="author">Author</label>
       </div>
     </div>
-    <div class="row blue-grey darken-1 form-style">
+    <div class="row blue-grey darken-1 form-style validate">
       <div class="input-field col s12">
         <input
           placeholder="Book Title"
           name="title"
           id="title"
           type="text"
-          class="validate"
+          class="white-text validate"
           value="{{ book.title }}"
+          required
         />
         <label for="title">Book Title</label>
       </div>
     </div>
-    <div class="row blue-grey darken-1 form-style">
+    <div class="row blue-grey darken-1 form-style validate">
       <div class="input-field col s12">
         <input
           placeholder="Plot Description"
           name="plot"
           id="plot"
           type="text"
-          class="materialize-textarea"
+          class="materialize-textarea white-text validate"
           value="{{ book.plot }}"
+          required
         />
         <label for="plot">Plot Description</label>
       </div>
     </div>
-    <div class="row blue-grey darken-1 form-style">
+    <div class="row blue-grey darken-1 form-style validate">
       <div class="input-field col s6">
         <input
           placeholder="Year Published"
           name="year_published"
           id="year_published"
           type="text"
-          class="validate"
+          class="white-text validate"
           value="{{ book.year_published }}"
+          required
         />
         <label for="year_published">Year Published</label>
       </div>
-      <div class="input-field col s6">
+      <div class="input-field col s6 validate">
         <input
           placeholder="Pages"
           name="pages"
           id="pages"
           type="text"
-          class="validate"
+          class="white-text validate"
           value="{{ book.pages }}"
+          required
         />
         <label for="pages">Pages</label>
       </div>
@@ -86,7 +91,7 @@
         name="action"
         class="btn waves-effect waves-light blue edit-button right"
       >
-        Edit This Book
+        Save Changes
       </button>
     </div>
   </form>

@@ -23,3 +23,7 @@ function scrollFunction() {
 function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+$(document).ready(function () {
+  $("input#input_text, textarea#textarea2").characterCounter();
+});
